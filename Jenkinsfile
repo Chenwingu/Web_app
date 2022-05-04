@@ -18,7 +18,7 @@ node('master')
                    }
      stage('Continuous delivery')
                    {
-                    input message: 'Waiting for approval from executor', submitter: 'ttwnt'
+                    input message: 'Waiting for approval from executor', submitter: 'ngasso'
                     deploy adapters: [tomcat8(credentialsId: 'prodep', path: '', url: 'http://172.31.95.153:8080')], contextPath: 'catenv', war: '**/*.war'
                    }
 }
