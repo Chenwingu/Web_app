@@ -18,6 +18,7 @@ node('slave')
                    }
      stage('Continuous delivery')
                    {
-                    deploy adapters: [tomcat8(credentialsId: 'prodtime', path: '', url: 'http://172.31.7.218:8080')], contextPath: 'prodenv', war: '**/*.war'
+                   input message: 'Waiting for approval from executor', submitter: 'ngasso'
+                   deploy adapters: [tomcat8(credentialsId: 'prodtime', path: '', url: 'http://172.31.7.218:8080')], contextPath: 'prodenv', war: '**/*.war'
                    }
 }
