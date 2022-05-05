@@ -6,7 +6,7 @@ stage('ContinuousDownload')
    
 	 {
 	
-    git 'https://github.com/ngasso/webapp.git' 
+    git 'https://github.com/ngasso/techee.git' 
     
 	}
 
