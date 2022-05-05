@@ -10,7 +10,7 @@ node('master')
                    }
     stage('Continuous deployment')
                    {
-                    deploy adapters: [tomcat8(credentialsId: 'qa', path: '', url: 'http://172.31.88.197:8080')], contextPath: 'qaenv', war: '**/*.war'
+                    deploy adapters: [tomcat8(credentialsId: 'qa', path: '', url: 'http://172.31.20.6:8080')], contextPath: 'qaenv', war: '**/*.war'
                    }
     stage('Continuous testing')
                    {
@@ -18,6 +18,6 @@ node('master')
                    }
      stage('Continuous delivery')
                    {
-                    deploy adapters: [tomcat8(credentialsId: 'prodep', path: '', url: 'http://172.31.95.153:8080')], contextPath: 'prodenv', war: '**/*.war'
+                    deploy adapters: [tomcat8(credentialsId: 'prodep', path: '', url: 'http://172.31.7.218:8080')], contextPath: 'prodenv', war: '**/*.war'
                    }
 }
