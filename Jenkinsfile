@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download')
                    {
-                     git branch: 'feature', credentialsId: 'me', url: 'https://github.com/ngasso/webapp.git'
+                     git branch: 'feature', credentialsId: 'Github.user', url: 'https://github.com/ngasso/techee.git'
                    }
     stage('Continuous build')
                    {
