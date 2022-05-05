@@ -1,8 +1,8 @@
-node('') 
+node('slave') 
 {
     stage('Continuous Download')
                    {
-                     git branch: 'feature', credentialsId: 'Github.user', url: 'https://github.com/ngasso/techee.git'
+                     git branch: 'feature', credentialsId: 'Github.user', : 'https://github.com/ngasso/techee.git'
                    }
     stage('Continuous build')
                    {
