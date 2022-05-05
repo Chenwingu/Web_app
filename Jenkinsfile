@@ -13,7 +13,6 @@ stage('ContinuousDownload')
 stage('Continuousbuild') 
    
 	 {
-
    input message: 'Waiting for approval from executor', submitter: 'ngasso'
    sh label: '', script: 'mvn package'
 	}
