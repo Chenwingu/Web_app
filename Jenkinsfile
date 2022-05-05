@@ -2,7 +2,7 @@ node('master')
 {
     stage('Continuous Download')
                    {
-                     git branch: 'feature', credentialsId: 'me', url: 'https://github.com/ttnwt/webapp.git'
+                     git branch: 'feature', credentialsId: 'me', url: 'https://github.com/ngasso/webapp.git'
                    }
     stage('Continuous build')
                    {
@@ -18,6 +18,6 @@ node('master')
                    }
      stage('Continuous delivery')
                    {
-                    deploy adapters: [tomcat8(credentialsId: 'prodep', path: '', url: 'http://172.31.95.153:8080')], contextPath: 'catenv', war: '**/*.war'
+                    deploy adapters: [tomcat8(credentialsId: 'prodep', path: '', url: 'http://172.31.95.153:8080')], contextPath: 'prodenv', war: '**/*.war'
                    }
 }
